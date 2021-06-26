@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import illustration from '../Assets/illustration.svg'
@@ -8,10 +8,16 @@ import googleImgIcon from '../Assets/google-icon.svg'
 import { Container, LeftScreen, RightScreen } from '../Styles/PageStyles';
 import Button from '../Components/Button';
 
+import { AuthContext } from '../Contexts/AuthContext'
+
 export function Home() {
   const history = useHistory();
+  const { user, signInWithGoogle } = useContext(AuthContext)
 
-  function navigateToNewRoom() {
+  async function handleCreateRoom() {
+    if (!user) {
+      await signInWithGoogle();
+    }
     history.push("/rooms/new")
   }
 
@@ -25,7 +31,7 @@ export function Home() {
       <RightScreen>
         <div className="main-content">
           <img src={logo} alt="Lemeask" />
-          <button className="create-room" onClick={navigateToNewRoom}>
+          <button className="create-room" onClick={handleCreateRoom}>
             <img src={googleImgIcon} alt="Logo do google" />
             Crie sua sala com o Google
           </button>

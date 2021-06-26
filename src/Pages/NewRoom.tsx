@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 
 import illustration from '../Assets/illustration.svg'
@@ -6,8 +6,11 @@ import logo from '../Assets/logo.svg'
 import Button from '../Components/Button'
 
 import { Container, LeftScreen, RightScreen } from '../Styles/PageStyles'
+import { AuthContext } from '../Contexts/AuthContext'; 
 
 export function NewRoom() {
+  const { user } = useContext(AuthContext);
+
   return (
     <Container>
       <LeftScreen>

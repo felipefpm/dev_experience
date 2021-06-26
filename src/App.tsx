@@ -1,19 +1,23 @@
 import React from 'react';
 
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import { AuthContextProvider } from './Contexts/AuthContext';
 import { Home } from './Pages/Home';
 import { NewRoom } from './Pages/NewRoom';
+import { Room } from './Pages/Room';
 
 
 
 function App() {
   return (
     <BrowserRouter>
-    <AuthContextProvider>
-      <Route path="/" exact component={Home} />
-      <Route path="/rooms/new" component={NewRoom} />
-    </AuthContextProvider>
+      <AuthContextProvider>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/rooms/new" component={NewRoom} />
+          <Route path="/rooms/:id" component={Room} />
+        </Switch>
+      </AuthContextProvider>
     </BrowserRouter>
   );
 }

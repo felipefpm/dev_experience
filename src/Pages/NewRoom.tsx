@@ -5,7 +5,7 @@ import illustration from '../Assets/illustration.svg'
 import logo from '../Assets/logo.svg'
 import Button from '../Components/Button'
 
-import { Container, LeftScreen, RightScreen } from '../Styles/PageStyles'
+import { Container, LeftScreen, RightScreen } from '../Styles/HomeNewRoomPageStyles'
 import { AuthContext } from '../Contexts/AuthContext'; 
 import { database } from '../Services/firebase'
 

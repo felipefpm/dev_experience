@@ -5,7 +5,7 @@ import illustration from '../Assets/illustration.svg'
 import logo from '../Assets/logo.svg'
 import googleImgIcon from '../Assets/google-icon.svg'
 
-import { Container, LeftScreen, RightScreen } from '../Styles/PageStyles';
+import { Container, LeftScreen, RightScreen } from '../Styles/HomeNewRoomPageStyles';
 import Button from '../Components/Button';
 
 import { AuthContext } from '../Contexts/AuthContext'

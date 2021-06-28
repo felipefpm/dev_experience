@@ -6,7 +6,15 @@ export const Container = styled.div`
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
   padding: 24px;
   margin-top: 8px;
-  
+
+  &.highligted {
+    background-color: #f4f0ff;
+    border: 1px solid #835afd;
+  }
+
+  &.answered {
+    background-color: #dbdcdd;
+  }
 
   p{
     color: #29292e;
@@ -18,6 +26,11 @@ export const Footer = styled.footer`
   justify-content: space-between;
   align-items: center;
   margin-top: 24px;
+
+  > div {
+    display: flex;
+    gap: 16px;
+  }
 
   .user-info {
     display: flex;
@@ -42,6 +55,7 @@ export const Footer = styled.footer`
     border: 0;
     cursor: pointer;
     transition: filter 0.2s;
+
 
     &.like-button {
       display: flex;

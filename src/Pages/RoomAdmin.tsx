@@ -3,6 +3,8 @@ import { useParams, useHistory } from 'react-router-dom';
 
 import logo from '../Assets/logo.svg'
 import deleteImg from '../Assets/delete.svg'
+import checkImg from '../Assets/check.svg'
+import answerImg from '../Assets/answer.svg'
 import RoomCode from '../Components/RoomCode';
 import Button from './../Components/Button/index';
 import Question from '../Components/Question';
@@ -25,6 +27,18 @@ export function RoomAdmin() {
       await database.ref(`rooms/${roomId}/questions/${questionId}`).remove()
     }
   
+  }
+
+  async function handleCheckQuestionAnswered(questionId: string) {
+    await database.ref(`rooms/${roomId}/questions/${questionId}`).update({
+      isAnswer: true
+    })
+  }
+
+  async function handleHighlightQuestion(questionId: string) {
+    await database.ref(`rooms/${roomId}/questions/${questionId}`).update({
+      isHighligted: true
+    })
   }
 
   async function handleLogoutRoom() {
@@ -63,7 +77,23 @@ export function RoomAdmin() {
               key={questions.id}
               content={questions.content}
               author={questions.author}
+              isAnswer={questions.isAnswer}
+              isHighligted={questions.isHighligted}
             >
+              <button
+                type="button"
+                onClick={() => handleCheckQuestionAnswered(questions.id)}
+              >
+                <img src={checkImg} alt="Marcar pergunta como respondida" />
+              </button>
+
+              <button
+                type="button"
+                onClick={() => handleHighlightQuestion(questions.id)}
+              >
+                <img src={answerImg} alt="Destacar pergunta" />
+              </button>
+
               <button
                 type="button"
                 onClick={() => handleDeleteQuestion(questions.id)}

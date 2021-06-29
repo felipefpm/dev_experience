@@ -2,7 +2,7 @@ import React, { FormEvent, useContext, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 
 import illustration from '../Assets/illustration.svg'
-import logo from '../Assets/logo.svg'
+import logo from '../Assets/logo.png'
 import Button from '../Components/Button'
 
 import { Container, LeftScreen, RightScreen } from '../Styles/HomeNewRoomPageStyles'

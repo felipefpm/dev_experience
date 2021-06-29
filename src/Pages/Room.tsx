@@ -1,7 +1,7 @@
 import React, { FormEvent, useContext, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-import logo from '../Assets/logo.svg'
+import logo from '../Assets/logo.png'
 import RoomCode from '../Components/RoomCode';
 import Button from './../Components/Button/index';
 import Question from '../Components/Question';

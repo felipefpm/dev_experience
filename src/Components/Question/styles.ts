@@ -9,7 +9,7 @@ export const Container = styled.div`
 
   &.highligted {
     background-color: #f4f0ff;
-    border: 1px solid #835afd;
+    border: 1px solid #48cae4;
   }
 
   &.answered {
@@ -64,10 +64,10 @@ export const Footer = styled.footer`
       gap: 8px;
 
       &.liked {
-        color: #835afd;
+        color: #48cae4;
 
         svg path {
-          stroke: #835afd;
+          stroke: #48cae4;
         }
       }
     }

@@ -8,7 +8,7 @@ export const Container = styled.button`
   height: 50px;
   border-radius: 8px;
   font-weight: 500;
-  background-color: #835afd;
+  background-color: #48cae4;
   color: #fff;
   padding: 0 32px;
 
@@ -28,7 +28,7 @@ export const Container = styled.button`
 
   &.outlined {
     background-color: #FFF;
-    border: 1px solid #835afd;
-    color: #835afd;
+    border: 1px solid #48cae4;
+    color: #48cae4;
   }
 `;

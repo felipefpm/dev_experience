@@ -11,7 +11,7 @@ export const LeftScreen = styled.aside`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #835afd;
+  background-color: #48cae4;
   color: #fff;
   padding: 120px 80px;
 
@@ -52,6 +52,7 @@ export const RightScreen = styled.main`
 
     > img {
       align-self: center;
+      height: 70px;
     }
 
     h2 {
@@ -85,7 +86,7 @@ export const RightScreen = styled.main`
       margin-top: 16px;
 
       a {
-        color: #e559f9;
+        color: #48cae4;
       }
     }
 

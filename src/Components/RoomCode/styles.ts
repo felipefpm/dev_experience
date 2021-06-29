@@ -4,7 +4,7 @@ export const Container = styled.button`
   display: flex;
   height: 40px;
 
-  border: 1px solid #835afd;
+  border: 1px solid #48cae4;
   border-radius: 8px;
 
   overflow: hidden;
@@ -17,7 +17,7 @@ export const Container = styled.button`
     justify-content: center;
     align-items: center;
     padding: 0 12px;
-    background-color: #835afd;
+    background-color: #48cae4;
   }
 
   span {

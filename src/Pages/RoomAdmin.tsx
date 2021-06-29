@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 
-import logo from '../Assets/logo.svg'
+import logo from '../Assets/logo.png'
 import deleteImg from '../Assets/delete.svg'
 import checkImg from '../Assets/check.svg'
 import answerImg from '../Assets/answer.svg'

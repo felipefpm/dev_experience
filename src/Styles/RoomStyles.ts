@@ -82,7 +82,7 @@ export const Main = styled.main`
       button {
         background-color: transparent;
         border: 0;
-        color: #835afd;
+        color: #48cae4;
         text-decoration: underline;
         font-size: 14px;
         font-weight: 500;
@@ -105,7 +105,7 @@ export const Title = styled.div`
 
   span {
     margin-left: 16px;
-    background-color: #e559f9;
+    background-color: #0096c7;
     border-radius: 9999px;
     padding: 8px 16px;
     color: #fff;
